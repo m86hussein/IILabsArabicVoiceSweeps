@@ -547,13 +547,15 @@ function writeIndex(runsDir) {
 <title>Arabic Voice Sweeps</title>
 <style>body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;max-width:900px;margin:0 auto;padding:32px 16px}
 h1{font-size:1.6em}p{color:#8b949e}a.run{display:block;background:#161b22;border:1px solid #30363d;border-radius:12px;padding:18px;margin:12px 0;color:inherit;text-decoration:none}
-a.run:hover{border-color:#58a6ff}.n{color:#58a6ff;font-weight:600}.m{color:#8b949e;font-size:.9em;margin-top:4px}.t{margin-top:8px;line-height:1.9}</style></head>
+a.run:hover{border-color:#58a6ff}.n{color:#58a6ff;font-weight:600}.m{color:#8b949e;font-size:.9em;margin-top:4px}.t{margin-top:8px;line-height:1.9}
+.go{display:inline-block;margin-top:12px;background:#238636;color:#fff;font-weight:600;padding:8px 16px;border-radius:8px}a.run:hover .go{background:#2ea043}</style></head>
 <body><h1>🎙️ ElevenLabs Arabic TTS Parameter Sweeps</h1>
-<p>Each run renders the same Arabic script across models × stability × similarity × speed, measured with ffmpeg.</p>
+<p>Each run renders the same Arabic script across models × stability × similarity × speed, measured with ffmpeg. Open a run to play its clips.</p>
 ${rows.map(r => `<a class="run" href="${encodeURIComponent(r.name)}/report.html">
 <div class="n">${esc(r.name)}</div>
 <div class="m">${esc(r.meta.voice?.name)} · ${r.ok} clips · ${(r.meta.models || []).map(m => esc(m.id)).join(", ")}${r.meta.startedAt ? " · " + esc(r.meta.startedAt.slice(0, 10)) : ""}</div>
-${r.meta.text ? `<div class="t" dir="rtl" lang="ar">${esc(r.meta.text)}</div>` : ""}</a>`).join("\n")}
+${r.meta.text ? `<div class="t" dir="rtl" lang="ar">${esc(r.meta.text)}</div>` : ""}
+<span class="go">▶ Listen to the ${r.ok} clips</span></a>`).join("\n")}
 </body></html>`;
   fs.writeFileSync(path.join(runsDir, "index.html"), html);
   console.log(`Index : ${path.relative(ROOT, path.join(runsDir, "index.html"))} (${rows.length} runs)`);
