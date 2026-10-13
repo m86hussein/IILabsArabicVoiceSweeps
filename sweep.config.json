@@ -1,0 +1,25 @@
+{
+  "runName": "2026-10-jeddawi",
+  "voice": {
+    "id": "yXEnnEln9armDCyhkXcA",
+    "name": "Jeddawi - Calm, Confident, and Deep",
+    "publicOwnerId": "563508e8457812075659ee86832f6a38d5dec38622b9ec9783ed5002775dbcce"
+  },
+  "text": "الحج ركن من أركان الإسلام الخمسة، وهو فريضة على كل مسلم بالغ عاقل قادر مرة واحدة في العمر. يبدأ الحاج رحلته بالإحرام من الميقات، ثم يتوجه إلى مكة المكرمة لطواف القدوم.",
+  "languageCode": "ar",
+  "seed": 42,
+  "outputFormat": "mp3_44100_128",
+  "concurrency": 2,
+  "models": [
+    { "id": "eleven_multilingual_v2", "creditMultiplier": 1 },
+    { "id": "eleven_v3", "creditMultiplier": 1 },
+    { "id": "eleven_flash_v2_5", "creditMultiplier": 1 }
+  ],
+  "grid": {
+    "stability": [0.3, 0.5, 0.7, 1.0],
+    "similarity": [0.75, 1.0],
+    "speed": [null, 0.85],
+    "style": 0
+  },
+  "budget": { "reserveCredits": 500 }
+}

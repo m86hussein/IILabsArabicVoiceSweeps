@@ -1,0 +1,15 @@
+{
+  "name": "iilabs-arabic-voice-sweeps",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ElevenLabs Arabic TTS parameter sweeps with audio analysis and an interactive HTML report",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "plan": "node src/sweep.js --dry-run",
+    "sweep": "node src/sweep.js",
+    "report": "node src/report.js"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0"
+  }
+}
