@@ -30,7 +30,7 @@ flowchart TB
 
     subgraph S2["② Evaluate: pick a winner"]
         FF["ffmpeg metrics<br/>chars/s · volume spread · pauses"]
-        REP["HTML report on CloudFront<br/>sliders · players · scores"]
+        REP["HTML report on GitHub Pages<br/>sliders · players · scores"]
         EAR["Listen and compare<br/>Saudi naturalness, calm pace"]
         WIN{{"Winning settings<br/>eleven_v3 · stab 0.5 · sim 0.5 · speed 0.85"}}
         FF -- "metrics per clip" --> REP
